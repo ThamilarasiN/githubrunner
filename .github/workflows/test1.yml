@@ -1,7 +1,8 @@
 name: "github test run for echo"
-on:
-  workflow_dispatch
+on: workflow_dispatch
 jobs:
-  runs-on: ubuntu-latest
-  steps:|
-    echo "hello"
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello step
+        run: echo "hello"
