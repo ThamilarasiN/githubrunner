@@ -10,3 +10,15 @@ jobs:
         run: |
           echo "line1"
           echo "line2"
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: run build step
+        run: echo "build step"
+
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: run test step
+        run: echo "test step"
